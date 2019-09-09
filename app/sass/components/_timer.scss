@@ -1,0 +1,54 @@
+.time-to-left {
+  height: calc(100vh - 95px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+  }
+  .timer-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: $main-font;
+    font-size: 25px;
+    .time-card {
+      display: flex;
+      max-width: 250px;
+      overflow-y: hidden;
+      width: 100%;
+      position: relative;
+      .future-time {
+        position: absolute;
+        max-width: 30px;
+        width: 100%;
+        left: 1px;
+      }
+      .unit-of-time {
+        position: relative;
+        display: flex;
+        padding-left: 30px;
+        .current-time {
+          max-width: 30px;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.animation-current {
+  animation: slide-current 1s ease-in-out;
+  top: 0;
+}
+
+.animation-future {
+  animation: slide-future 1s ease-in-out;
+  top: -25px;
+}
